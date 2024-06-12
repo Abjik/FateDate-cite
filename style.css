@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    background-color: #6495ed;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.app-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.phone-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description {
+    max-width: 500px;
+    margin-left: 20px;
+}
+
+.about-us {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us h2 {
+    color: #6495ed;
+}
+
+.about-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-us li {
+    margin: 5px 0;
+}
