@@ -6,6 +6,8 @@ body {
     padding: 0;
     background-color: #f0f8ff;
     color: #000;
+    position: relative;
+    overflow-x: hidden;
 }
 
 header {
@@ -26,18 +28,54 @@ header h1 {
     justify-content: space-around;
     padding: 20px;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.images-container {
+    position: relative;
+    width: 300px;
+    height: 450px;
+}
+
+.phone-image img, .additional-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
 }
 
 .phone-image img {
-    max-width: 100%;
+    width: 350px;
     height: auto;
+    z-index: 10;
+}
+
+.additional-images {
+    width: 300px;
+    height: 450px;
+}
+
+.person-talking {
+    width: 400px; /* Увеличиваем размер изображения */
+    top: 30px; /* Сдвигаем вверх для сокращения расстояния */
+    right: 80px; /* Сдвигаем ближе к центру */
+    transform: rotate(-10deg);
+    z-index: 5;
+}
+
+.two-people-chatting {
+    width: 400px; /* Увеличиваем размер изображения */
+    bottom: -10px; /* Сдвигаем вверх для сокращения расстояния */
+    right: -350px; /* Сдвигаем ближе к центру */
+    transform: rotate(10deg);
+    z-index: 15;
 }
 
 .description {
     max-width: 500px;
     margin: 20px;
-    font-size: 1em;
+    font-size: 1.4em;
     color: #333;
+    z-index: 20;
 }
 
 .download-button {
@@ -61,6 +99,9 @@ header h1 {
     background-color: #fff;
     padding: 20px;
     text-align: center;
+    position: relative;
+    z-index: 30;
+    font-size: 1.2em;
 }
 
 .about-us h2 {
@@ -85,11 +126,37 @@ header h1 {
     color: #555;
 }
 
+.highlight {
+    color: #c71585; /* This is a dark pink color */
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .app-info {
         flex-direction: column;
         text-align: center;
+    }
+
+    .images-container {
+        width: 80%;
+        height: 250px;
+        right: 100px;
+    }
+
+    .phone-image img {
+        width: 300px;
+    }
+
+    .additional-images {
+        width: 100%;
+        height: auto;
+    }
+
+    .person-talking, .two-people-chatting {
+        width: 180px; /* Уменьшаем размер для мобильных устройств */
+        transform: none;
+        position: static;
+        margin: 10px 0;
     }
 
     .description {
